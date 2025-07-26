@@ -1,0 +1,12 @@
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 5% !important;
+    flex: 1;
+}
+
+

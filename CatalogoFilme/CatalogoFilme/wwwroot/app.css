@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap&subset=latin');
+
+/* 2. Variáveis de tema claro e escuro */
+:root {
+    /* Fontes */
+    --font-family: 'Inter', 'Segoe UI', sans-serif;
+    /* Tipografia */
+    --letter-spacing-base: 0.3px;
+    /* Cores (claro) */
+    --color-text: hsl(210, 10%, 15%);
+    --color-bg: hsl(0, 0%, 98%);
+    --color-link: hsl(208, 75%, 35%);
+}
+
+@custom-variant dark (&:where(.dark, .dark *)) {
+    :root {
+        --color-text: hsl(220, 10%, 90%);
+        --color-bg: hsl(230, 25%, 10%);
+        --color-link: hsl(200, 100%, 70%);
+    }
+}
+
+/* 3. Reset / base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 4. HTML e BODY */
+html {
+    font-family: var(--font-family);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    /* suavização avançada */
+    -webkit-font-smoothing: antialiased; /* Mac/WebKit */
+    -moz-osx-font-smoothing: grayscale; /* Firefox Mac */
+    text-rendering: optimizeLegibility; /* Linux/Windows subpixel */
+    /* ajuste de variação de fonte */
+    font-variation-settings: 'wght' 400;
+    transition: background-color .3s, color .3s;
+}
+
+
+/* 5. Layout básico */
+nav {
+    background: #1d223a;
+}
+
+main {
+    flex: 1;
+    margin: 7% auto;
+    max-width: 1400px;
+}
+
+/* 6. Cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    font-variation-settings: 'wght' 600; /* negrito mais fluido */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+/* 7. Parágrafos */
+p {
+    margin-bottom: 1.4rem;
+    font-variation-settings: 'wght' 300; /* corpo mais leve */
+}
+
+/* 8. Links */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    position: relative;
+}
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background: currentColor;
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform .2s ease-in-out;
+    }
+
+    a:hover::after {
+        transform: scaleX(1);
+    }
+
+/* 9. Listas e blocos */
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+section, article {
+    margin-bottom: 2.5rem;
+}
+
+/* 1. Cores e variáveis para tema claro e escuro */
+:root {
+    --sb-track-light: rgba(255, 255, 255, 0.6);
+    --sb-thumb-light: rgba(0, 0, 0, 0.15);
+    --sb-thumb-light-hover: rgba(0, 0, 0, 0.3);
+    --sb-track-dark: rgba(30, 30, 47, 0.6);
+    --sb-thumb-dark: rgba(255, 255, 255, 0.2);
+    --sb-thumb-dark-hover: rgba(255, 255, 255, 0.4);
+    --sb-width: 8px;
+    --sb-radius: 4px;
+    --sb-blur: 6px;
+    --sb-transition: 0.35s ease;
+}
+
+
+/* 3. Estilização WebKit (Chrome, Edge, Safari) */
+
+/* Dimensões e track transparente */
+::-webkit-scrollbar {
+    width: var(--sb-width);
+    height: var(--sb-width);
+}
+
+/* Track com blur e transparência */
+body:not(.dark)::-webkit-scrollbar-track {
+    background: var(--sb-track-light);
+    backdrop-filter: blur(var(--sb-blur));
+    border-radius: var(--sb-radius);
+}
+
+.dark::-webkit-scrollbar-track {
+    background: var(--sb-track-dark);
+    backdrop-filter: blur(var(--sb-blur));
+    border-radius: var(--sb-radius);
+}
+
+/* Thumb inicialmente oculto, aparece ao hover ou arrastar */
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: var(--sb-radius);
+    transition: background-color var(--sb-transition), opacity var(--sb-transition);
+    opacity: 0;
+}
+
+body:not(.dark)::-webkit-scrollbar-thumb {
+    border: 2px solid var(--sb-track-light);
+}
+
+.dark::-webkit-scrollbar-thumb {
+    border: 2px solid var(--sb-track-dark);
+}
+
+/* Thumb ao interagir */
+body:not(.dark)::-webkit-scrollbar-thumb:hover,
+body:not(.dark)::-webkit-scrollbar-thumb:active,
+body:not(.dark):hover::-webkit-scrollbar-thumb {
+    background-color: var(--sb-thumb-light-hover);
+    opacity: 1;
+}
+
+.dark::-webkit-scrollbar-thumb:hover,
+.dark::-webkit-scrollbar-thumb:active,
+.dark:hover::-webkit-scrollbar-thumb {
+    background-color: var(--sb-thumb-dark-hover);
+    opacity: 1;
+}
+
+/* Também mostrar thumb enquanto estiver rolando */
+@media (any-pointer: fine) {
+    body:active::-webkit-scrollbar-thumb {
+        opacity: 1;
+    }
+}
+
+/* 4. Firefox (suporte parcial) */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sb-thumb-light-hover) var(--sb-track-light);
+}
+
+.dark * {
+    scrollbar-color: var(--sb-thumb-dark-hover) var(--sb-track-dark);
+}
+
+/* 1. Variáveis de configuração */
+:root {
+    --img-border-radius: 12px;
+    --img-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --img-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    --img-transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --img-grayscale-level: 20%;
+    --img-brightness-level: 1.05;
+    --img-contrast-level: 1.1;
+    --img-saturate-hover: 1.2;
+}
+
+/* 2. Card base */
+.cardFilme {
+    background: var(--background-color, #fff);
+    padding: 1rem;
+    border-radius: var(--img-border-radius);
+    box-shadow: var(--img-shadow);
+    overflow: hidden;
+    transition: box-shadow var(--img-transition);
+}
+
+    .cardFilme:hover {
+        box-shadow: var(--img-hover-shadow);
+    }
+
+    /* 3. Imagem: sempre visível, mantém proporção 2:3 */
+    .cardFilme img {
+        display: block; /* torna a img um bloco */
+        width: 100%; /* 100% da largura do card */
+        aspect-ratio: 2/3; /* forçado a manter proporção */
+        object-fit: cover; /* cobre o container sem distorcer */
+        border-radius: var(--img-border-radius);
+        filter: grayscale(var(--img-grayscale-level)) brightness(var(--img-brightness-level)) contrast(var(--img-contrast-level));
+        transition: transform var(--img-transition), filter var(--img-transition);
+    }
+
+    /* 4. Hover zoom + cores vibrantes */
+    .cardFilme:hover img {
+        transform: scale(1.01) translateY(-4px);
+        filter: grayscale(0) brightness(var(--img-brightness-level)) contrast(var(--img-contrast-level)) saturate(var(--img-saturate-hover));
+    }
+
+    /* 5. Placeholder simples sem JS:
+   – exibe cor de fundo até a img carregar */
+    .cardFilme img {
+        background-color: #f0f0f0;
+    }
+
+/* 6. Suporte Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sb-thumb-light-hover, rgba(0,0,0,0.3)) var(--sb-track-light, rgba(255,255,255,0.6));
+}

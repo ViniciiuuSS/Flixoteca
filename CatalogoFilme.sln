@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogoFilme", "CatalogoFilme\CatalogoFilme\CatalogoFilme.csproj", "{9469B3C4-0300-4FA1-9151-2B40B4EFADC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogoFilme.Client", "CatalogoFilme\CatalogoFilme.Client\CatalogoFilme.Client.csproj", "{090F4289-7A49-48BB-88D4-9900B522E4EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9469B3C4-0300-4FA1-9151-2B40B4EFADC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9469B3C4-0300-4FA1-9151-2B40B4EFADC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9469B3C4-0300-4FA1-9151-2B40B4EFADC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9469B3C4-0300-4FA1-9151-2B40B4EFADC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090F4289-7A49-48BB-88D4-9900B522E4EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090F4289-7A49-48BB-88D4-9900B522E4EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090F4289-7A49-48BB-88D4-9900B522E4EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090F4289-7A49-48BB-88D4-9900B522E4EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF971C5E-8154-4FDF-A4D3-DC2B9B9D28F9}
+	EndGlobalSection
+EndGlobal
