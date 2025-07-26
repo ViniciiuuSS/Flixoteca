@@ -2,8 +2,6 @@
 
 Flixoteca é um catálogo de filmes minimalista e responsivo que utiliza a API pública do TMDB para exibir informações visuais dos filmes. O sistema armazena os dados em um arquivo `.json` local para persistência e leitura offline. A interface é enriquecida com os plugins **Flowbite** e **PNotify** para uma melhor experiência do usuário.
 
-![Flixoteca Preview](preview.png)
-
 ---
 
 ## 🚀 Tecnologias e Ferramentas
@@ -23,7 +21,3 @@ Flixoteca é um catálogo de filmes minimalista e responsivo que utiliza a API p
 - 🧠 **Leitura inteligente do JSON** caso já existam dados salvos
 - ⚡ **Notificações amigáveis** com PNotify para ações do usuário
 - 💡 **Interface responsiva** e componentes modernos via Flowbite
-
----
-
-## 📁 Estrutura de Arquivos
