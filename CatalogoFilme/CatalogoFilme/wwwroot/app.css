@@ -51,7 +51,10 @@ nav {
 
 main {
     flex: 1;
-    margin: 7% auto;
+    margin-left: clamp(7%, 10vw, 120px);
+    margin-right: clamp(7%, 10vw, 120px);
+    margin-top: 6rem;
+    margin-bottom: 4rem;
     max-width: 1400px;
 }
 
