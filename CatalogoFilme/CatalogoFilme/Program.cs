@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost", policy =>
     {
-        policy.WithOrigins("https://localhost:7094")
+        policy.WithOrigins("https://flixoteca.onrender.com/")
               .AllowAnyMethod()
               .AllowAnyHeader()
               .AllowCredentials();

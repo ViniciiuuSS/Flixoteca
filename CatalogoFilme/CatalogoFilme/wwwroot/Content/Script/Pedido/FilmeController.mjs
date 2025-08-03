@@ -7,7 +7,7 @@ window._init = async () => {
     const apiKey = '8bf5b7a08b045cedf975646ad90ca17e';
     const baseImageUrl = 'https://image.tmdb.org/t/p/w300';
     const maxMovies = 20;
-    const backendUrl = 'https://localhost:7094/Filme/';
+    const backendUrl = 'https://flixoteca.onrender.com/Filme/';
     const placeHolderImg = '/Img/not-foudImg-white.png';
 
     let originalMovies = [];
