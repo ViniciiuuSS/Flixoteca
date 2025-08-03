@@ -1,4 +1,4 @@
-# 🎬 Flixoteca
+# 🎬 Flixoteca - **[Flixoteca](https://flixoteca.onrender.com/)** 
 
 **Flixoteca** é um catálogo de filmes construído com **Blazor WebAssembly (C#)**, que consome imagens da API pública da TMDB e utiliza **Flowbite** e **PNotify** para criar uma interface moderna e responsiva. Os dados são armazenados localmente em um arquivo `.json`, permitindo navegação offline após o carregamento inicial.
 
